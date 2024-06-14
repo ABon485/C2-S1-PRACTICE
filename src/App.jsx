@@ -1,42 +1,26 @@
+// src/App.js
+import React from 'react';
 import pnLogo from "./assets/pn-logo.png";
+import Header from './components/Header';
+import Scores from './components/Scores';
+import { HTML_RESULTS } from "./data";
 
-function App() {
+const App = () => {
+  const batchName = "PNC 24"; 
+  const courseName = "HTML"; 
   return (
     <>
       <header id="header">
-        <img src={pnLogo} alt="PN Logo" />
-        <h1>Students results for (fake batch name))</h1>
+        <Header batchName={batchName} />
       </header>
 
       <main className="scores-container">
-        <div class="scores">
-          <h1>Fake Course</h1>
-
-          <table>
-            <thead>
-              <tr>
-                <th>First name</th>
-                <th>Last name</th>
-                <th>Score</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>First name 1 </td>
-                <td>Last name 1 </td>
-                <td>55</td>
-              </tr>
-              <tr>
-                <td>First name 2 </td>
-                <td>Last name 2 </td>
-                <td>45</td>
-              </tr>
-            </tbody>
-          </table>
+        <div className="scores">
+          <Scores courseName={courseName} courseResults={HTML_RESULTS} />
         </div>
       </main>
     </>
   );
-}
+};
 
 export default App;
