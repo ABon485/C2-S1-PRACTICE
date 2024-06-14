@@ -5,8 +5,6 @@ import Scores from './components/Scores';
 import { HTML_RESULTS } from "./data";
 
 const App = () => {
-  const batchName = "PNC 24"; 
-  const courseName = "HTML"; 
   return (
     <div>
       <header id="header">

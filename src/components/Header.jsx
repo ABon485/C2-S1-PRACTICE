@@ -8,7 +8,6 @@ const Header = () => {
   return (
     <div>
       <Header batchName={batchName} />
-     
     </div>
   );
 };
